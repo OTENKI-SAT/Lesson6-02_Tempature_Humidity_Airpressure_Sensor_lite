@@ -1,9 +1,11 @@
 #include "mbed.h"
 #include "BME280.h"
+#include "LITE_EPS.h"
 
 //I2Cピン定義
 #define SCL_PIN PB_6
 #define SDA_PIN PB_7
+LITE_EPS    eps(PA_0, PA_4);
 
 I2C i2c(SDA_PIN, SCL_PIN);
 BME280 sensor(i2c); 
